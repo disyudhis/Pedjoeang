@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2507445161047321933}
   - component: {fileID: 109984678840636780}
   - component: {fileID: -5266755650693704206}
+  - component: {fileID: 2121125613816555964}
   m_Layer: 0
   m_Name: Enemy_setup
   m_TagString: Untagged
@@ -64,6 +65,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2121125613816555964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507445161047321932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c83a3266a1ebe4fad484cb17384e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityModifier: 2
 --- !u!1001 &5041201504237945287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +148,14 @@ PrefabInstance:
     - target: {fileID: 400052, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 692f948510f511a42afec2b21a2e4b11, type: 2}
+    - target: {fileID: 9500000, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
