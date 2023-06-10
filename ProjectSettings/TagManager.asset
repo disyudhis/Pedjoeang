@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Laser
   - Asteroid
+  - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Grab
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
