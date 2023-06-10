@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-
     private Rigidbody enemyRb;
     private Animator enemyAnim;
     public float gravityModifier;
