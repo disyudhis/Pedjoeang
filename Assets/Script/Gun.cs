@@ -4,8 +4,11 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private Animator bulletAnimator;
     [SerializeField] private AudioClip bulletSFX;
+    [SerializeField] private Transform raycastOrigin;
 
     private AudioSource bulletAudioSource;
+
+    private RaycastHit hit;
 
     private void Awake()
     {
@@ -19,5 +22,14 @@ public class Gun : MonoBehaviour
 
         //play laser gun sfx
         bulletAudioSource.PlayOneShot(bulletSFX);
+
+        //raycast
+        if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, 800f))
+        {
+            if (hit.transform.GetComponent<EnemyHit>() != null)
+            {
+                hit.transform.GetComponent<EnemyHit>().EnemyKilled();
+            }
+        }
     }
 }
