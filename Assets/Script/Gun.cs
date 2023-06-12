@@ -5,6 +5,8 @@ public class Gun : MonoBehaviour
     [SerializeField] private Animator bulletAnimator;
     [SerializeField] private AudioClip bulletSFX;
     [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private Transform muzzlePosition;
 
     private AudioSource bulletAudioSource;
 
@@ -22,6 +24,11 @@ public class Gun : MonoBehaviour
 
         //play laser gun sfx
         bulletAudioSource.PlayOneShot(bulletSFX);
+
+        //play muzzle effect
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, muzzlePosition.position, muzzlePosition.rotation);
+        muzzleFlash.transform.parent = muzzlePosition;
+        Destroy(muzzleFlash, 0.2f);
 
         //raycast
         if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, 800f))
