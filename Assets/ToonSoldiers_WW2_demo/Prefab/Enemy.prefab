@@ -255,6 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDied: {fileID: 100002, guid: 3b1513bcb86426b4795879be6a128ed7, type: 3}
+  gameController: {fileID: 0}
+  popupCanvas: {fileID: 4650882367695097814, guid: 8be6f0da0db6c864eb94333e7a208326,
+    type: 3}
 --- !u!1 &120650
 GameObject:
   m_ObjectHideFlags: 0
