@@ -6,7 +6,6 @@ public class EnemyKillZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision");
         if (other.gameObject.CompareTag("Enemy"))
         {
             
