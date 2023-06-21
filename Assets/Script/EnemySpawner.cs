@@ -32,13 +32,25 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        //get a random position for the asteroid
-        Vector3 spawnPoint = transform.position + new Vector3(UnityEngine.Random.Range(-spawnerSize.x / 2, spawnerSize.x / 2),
+        if (GameController.currentGameStatus == GameController.GameState.Playing)
+        {
+            //get a random position for the enemy
+
+            Vector3 spawnPoint = transform.position + new Vector3(UnityEngine.Random.Range(-spawnerSize.x / 2, spawnerSize.x / 2),
             UnityEngine.Random.Range(-spawnerSize.y / 2, spawnerSize.y / 2),
             UnityEngine.Random.Range(-spawnerSize.z / 2, spawnerSize.z / 2));
 
-        GameObject enemy = Instantiate(enemyModel, spawnPoint, transform.rotation);
+            GameObject enemy = Instantiate(enemyModel, spawnPoint, transform.rotation);
 
-        enemy.transform.SetParent(this.transform);
+            enemy.transform.SetParent(this.transform);
+        }
+        if (GameController.currentGameStatus == GameController.GameState.GameOver)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in enemies)
+            {
+                Destroy(enemy);
+            }
+        }
     }
 }

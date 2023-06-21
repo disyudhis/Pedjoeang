@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +18,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreText;
 
     private int highScore;
+
+    [Header("Gameplay audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] gameplayAudio;
 
     private int playerScore;
 
@@ -58,7 +61,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-   
     public void UpdatePlayerScore(int enemyHitPoints)
     {
         if (currentGameStatus != GameState.Playing)
@@ -71,7 +73,9 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         currentGameStatus = GameState.Playing;
+        PlayGameAudio(gameplayAudio[1], true);
     }
+
     private void GameOver()
     {
         currentGameStatus = GameState.GameOver;
@@ -79,12 +83,15 @@ public class GameController : MonoBehaviour
         //show the game over screen
         gameOverScreen.SetActive(true);
 
-        //check the high score ... 
-        if(playerScore > PlayerPrefs.GetInt("HighScore"))
+        //check the high score ...
+        if (playerScore > PlayerPrefs.GetInt("HighScore"))
         {
             PlayerPrefs.SetInt("HighScore", playerScore);
             highScoreText.text = playerScore.ToString();
         }
+
+        // change the audio
+        PlayGameAudio(gameplayAudio[2], false);
     }
 
     public void ResetGame()
@@ -98,5 +105,15 @@ public class GameController : MonoBehaviour
         //reset the score
         playerScore = 0;
         scoreText.text = "0";
+
+        //play intro music
+        PlayGameAudio(gameplayAudio[0], true);
+    }
+
+    private void PlayGameAudio(AudioClip clipToPlay, bool shouldLoop)
+    {
+        audioSource.clip = clipToPlay;
+        audioSource.loop = shouldLoop;
+        audioSource.Play();
     }
 }

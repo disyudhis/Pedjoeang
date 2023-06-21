@@ -2779,15 +2779,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4710726587445036, guid: d671b2b3dae0c254ea0925e69cfa667b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.59
+      value: 14.679628
       objectReference: {fileID: 0}
     - target: {fileID: 4710726587445036, guid: d671b2b3dae0c254ea0925e69cfa667b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0748394
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 4710726587445036, guid: d671b2b3dae0c254ea0925e69cfa667b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.22
+      value: 0.22170115
       objectReference: {fileID: 0}
     - target: {fileID: 4710726587445036, guid: d671b2b3dae0c254ea0925e69cfa667b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2815,11 +2815,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4710726587445036, guid: d671b2b3dae0c254ea0925e69cfa667b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 205059290857675966, guid: d671b2b3dae0c254ea0925e69cfa667b,
-        type: 3}
-      propertyPath: m_FadeMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5675,7 +5670,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 71e0e4a8e839e5c46a2fe683034fdc33, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7597ad459337ed444b0134b6e6ee0e71, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.115
   m_Pitch: 1
@@ -6678,6 +6673,11 @@ MonoBehaviour:
   scoreText: {fileID: 475183414}
   gameOverScreen: {fileID: 1830700940}
   highScoreText: {fileID: 1169357969}
+  audioSource: {fileID: 1336059416}
+  gameplayAudio:
+  - {fileID: 8300000, guid: 7597ad459337ed444b0134b6e6ee0e71, type: 3}
+  - {fileID: 8300000, guid: 71e0e4a8e839e5c46a2fe683034fdc33, type: 3}
+  - {fileID: 8300000, guid: 5738bf04d5a0b7645a59d4b6f8715ca6, type: 3}
 --- !u!224 &1753756954
 RectTransform:
   m_ObjectHideFlags: 0
