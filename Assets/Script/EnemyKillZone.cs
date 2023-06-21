@@ -8,7 +8,6 @@ public class EnemyKillZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            
             Destroy(other.gameObject);
         }
     }

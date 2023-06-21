@@ -1,0 +1,4 @@
+interface UIController
+{
+    void HitByRaycast();
+}

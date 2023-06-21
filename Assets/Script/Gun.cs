@@ -37,6 +37,10 @@ public class Gun : MonoBehaviour
             {
                 hit.transform.GetComponent<EnemyHit>().EnemyKilled();
             }
+            else if(hit.transform.GetComponent<UIController>() != null)
+            {
+                hit.transform.GetComponent<UIController>().HitByRaycast();
+            }
         }
     }
 }

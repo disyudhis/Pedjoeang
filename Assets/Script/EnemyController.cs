@@ -15,6 +15,9 @@ public class EnemyController : MonoBehaviour
     public Vector3 movementDirection;
     private float enemySpeed;
 
+    public AudioSource footstepSound;
+    private bool isPlayingFootstep = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +34,27 @@ public class EnemyController : MonoBehaviour
     {
         transform.Translate(movementDirection * Time.deltaTime * enemySpeed, Space.World);
         enemyAnim.SetBool("isMoving", true);
+       
+        if(!isPlayingFootstep)
+        {
+            PlayFootstepSound();
+        }
+    }
+
+    public void PlayFootstepSound()
+    {
+        footstepSound.Play();
+        isPlayingFootstep = true;
+    }
+
+    public void StopFootstepSound()
+    {
+        footstepSound.Stop();
+        isPlayingFootstep = false;
+    }
+
+    public bool IsPlayingFootstepSound()
+    {
+        return isPlayingFootstep;
     }
 }
