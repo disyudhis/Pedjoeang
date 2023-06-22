@@ -10,3 +10,5 @@ Cara bermain :
 1. Ambil pistol yang tersedia
 2. Tembak seluruh pasukan penjajah
 3. Dapatkan point terbanyak
+
+Link Trailer : https://youtu.be/m__cIW-zR7s
