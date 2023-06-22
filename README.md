@@ -12,3 +12,5 @@ Cara bermain :
 3. Dapatkan point terbanyak
 
 Link Trailer : https://youtu.be/m__cIW-zR7s
+
+Link Project : https://telkomuniversityofficial-my.sharepoint.com/:f:/g/personal/yudhistirahs_student_telkomuniversity_ac_id/Eiw9DeXuPvZEhlOPwH4SpqsB4NDqC292c9vDMmCZ0ygZWg?e=V4TEBC
